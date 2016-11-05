@@ -1,0 +1,6 @@
+[gd_resource type="CanvasItemShader" format=1]
+
+[resource]
+
+_code = { "fragment":"uniform float waveFreq=25.0;\nuniform float waveDisplacement=0.04;\n\nvec2 nuv = vec2( UV.x, UV.y ) ;\nnuv.x += waveDisplacement * sin(waveFreq*UV.y + TIME);\nCOLOR = tex(TEXTURE, nuv);", "fragment_ofs":0, "light":"", "light_ofs":0, "vertex":"", "vertex_ofs":0 }
+
