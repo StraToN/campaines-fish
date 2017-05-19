@@ -1,77 +1,63 @@
-[gd_scene load_steps=16 format=1]
+[gd_scene load_steps=14 format=1]
 
 [ext_resource path="res://scripts/fish_realistic.gd" type="Script" id=1]
-[ext_resource path="res://assets/blue/fish_1.tex" type="Texture" id=2]
-[ext_resource path="res://assets/blue/fish_2.tex" type="Texture" id=3]
-[ext_resource path="res://assets/blue/fish_3.tex" type="Texture" id=4]
-[ext_resource path="res://assets/blue/fish_4.tex" type="Texture" id=5]
-[ext_resource path="res://assets/blue/fish_5.tex" type="Texture" id=6]
-[ext_resource path="res://assets/blue/fish_6.tex" type="Texture" id=7]
-[ext_resource path="res://assets/blue/fish_7.tex" type="Texture" id=8]
-[ext_resource path="res://assets/blue/fish_8.tex" type="Texture" id=9]
-[ext_resource path="res://assets/blue/fish_9.tex" type="Texture" id=10]
-[ext_resource path="res://assets/blue/fish_10.tex" type="Texture" id=11]
-[ext_resource path="res://assets/blue/fish_11.tex" type="Texture" id=12]
-[ext_resource path="res://assets/blue/fish_12.tex" type="Texture" id=13]
+[ext_resource path="res://graphics/fryy/fish2.png" type="Texture" id=2]
+[ext_resource path="res://graphics/fryy/fish4.png" type="Texture" id=3]
+[ext_resource path="res://graphics/fryy/fish3.png" type="Texture" id=4]
+[ext_resource path="res://graphics/fryy/fish5.png" type="Texture" id=5]
+[ext_resource path="res://graphics/fryy/fish6.png" type="Texture" id=6]
+[ext_resource path="res://graphics/fryy/fish7.png" type="Texture" id=7]
+[ext_resource path="res://graphics/fryy/fish8.png" type="Texture" id=8]
+[ext_resource path="res://graphics/fryy/fish9.png" type="Texture" id=9]
+[ext_resource path="res://graphics/fryy/aileronR.png" type="Texture" id=10]
+[ext_resource path="res://graphics/fryy/aileronL.png" type="Texture" id=11]
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=1]
 
 resource/name = "idle"
 length = 1.0
 loop = false
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11/end/end2:transform/rot")
+tracks/0/path = NodePath("s1/s2/s3/s4/s5/s6/s7:transform/rot")
 tracks/0/interp = 1
-tracks/0/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11/end:transform/rot")
+tracks/1/path = NodePath("s1/s2/s3/s4/s5/s6/s7/s8:transform/rot")
 tracks/1/interp = 1
-tracks/1/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/2/type = "value"
-tracks/2/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11:transform/rot")
+tracks/2/path = NodePath("s1/s2/s3/s4/s5/s6:transform/rot")
 tracks/2/interp = 1
-tracks/2/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/3/type = "value"
-tracks/3/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10:transform/rot")
+tracks/3/path = NodePath("s1/s2/s3/s4/s5:transform/rot")
 tracks/3/interp = 1
-tracks/3/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/4/type = "value"
-tracks/4/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9:transform/rot")
+tracks/4/path = NodePath("s1/s2/s3/s4:transform/rot")
 tracks/4/interp = 1
-tracks/4/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/5/type = "value"
-tracks/5/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8:transform/rot")
+tracks/5/path = NodePath("s1/s2/s3:transform/rot")
 tracks/5/interp = 1
-tracks/5/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/6/type = "value"
-tracks/6/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7:transform/rot")
+tracks/6/path = NodePath("s1/s2:transform/rot")
 tracks/6/interp = 1
-tracks/6/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 tracks/7/type = "value"
-tracks/7/path = NodePath("head/s1/s2/s3/s4/s5/s6:transform/rot")
+tracks/7/path = NodePath("s1:transform/rot")
 tracks/7/interp = 1
-tracks/7/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
-tracks/8/type = "value"
-tracks/8/path = NodePath("head/s1/s2/s3/s4/s5:transform/rot")
-tracks/8/interp = 1
-tracks/8/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
-tracks/9/type = "value"
-tracks/9/path = NodePath("head/s1/s2/s3/s4:transform/rot")
-tracks/9/interp = 1
-tracks/9/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
-tracks/10/type = "value"
-tracks/10/path = NodePath("head/s1/s2/s3:transform/rot")
-tracks/10/interp = 1
-tracks/10/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
-tracks/11/type = "value"
-tracks/11/path = NodePath("head/s1/s2:transform/rot")
-tracks/11/interp = 1
-tracks/11/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
-tracks/12/type = "value"
-tracks/12/path = NodePath("head/s1:transform/rot")
-tracks/12/interp = 1
-tracks/12/keys = { "cont":true, "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "values":[ 0.0 ] }
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 0 ), "transitions":FloatArray( 1 ), "update":0, "values":[ 0.0 ] }
 
 [sub_resource type="Animation" id=2]
 
@@ -80,60 +66,49 @@ length = 2.0
 loop = true
 step = 0.1
 tracks/0/type = "value"
-tracks/0/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11/end/end2:transform/rot")
+tracks/0/path = NodePath("s1/s2/s3/s4/s5/s6/s7:transform/rot")
 tracks/0/interp = 1
-tracks/0/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 0.0, 0.0 ] }
+tracks/0/imported = false
+tracks/0/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 4.53687, -5.20409 ] }
 tracks/1/type = "value"
-tracks/1/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11/end:transform/rot")
+tracks/1/path = NodePath("s1/s2/s3/s4/s5/s6/s7/s8:transform/rot")
 tracks/1/interp = 1
-tracks/1/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ -30.3968, 33.369 ] }
+tracks/1/imported = false
+tracks/1/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 3.09466, -3.97509 ] }
 tracks/2/type = "value"
-tracks/2/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11:transform/rot")
+tracks/2/path = NodePath("s1/s2/s3/s4/s5/s6:transform/rot")
 tracks/2/interp = 1
-tracks/2/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 0.0, 0.0 ] }
+tracks/2/imported = false
+tracks/2/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 6.57231, -7.01711 ] }
 tracks/3/type = "value"
-tracks/3/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10:transform/rot")
+tracks/3/path = NodePath("s1/s2/s3/s4/s5:transform/rot")
 tracks/3/interp = 1
-tracks/3/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.54267, -1.84788 ] }
+tracks/3/imported = false
+tracks/3/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 8.41151, -6.67997 ] }
 tracks/4/type = "value"
-tracks/4/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8/s9:transform/rot")
+tracks/4/path = NodePath("s1/s2/s3/s4:transform/rot")
 tracks/4/interp = 1
-tracks/4/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 2.24081, -2.95333 ] }
+tracks/4/imported = false
+tracks/4/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 4.24859, -6.6135 ] }
 tracks/5/type = "value"
-tracks/5/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7/s8:transform/rot")
+tracks/5/path = NodePath("s1/s2/s3:transform/rot")
 tracks/5/interp = 1
-tracks/5/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 3.09466, -3.97509 ] }
+tracks/5/imported = false
+tracks/5/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ 1.22188, -0.920937 ] }
 tracks/6/type = "value"
-tracks/6/path = NodePath("head/s1/s2/s3/s4/s5/s6/s7:transform/rot")
+tracks/6/path = NodePath("s1/s2:transform/rot")
 tracks/6/interp = 1
-tracks/6/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 4.53687, -5.20409 ] }
+tracks/6/imported = false
+tracks/6/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ -0.501401, 1.06661 ] }
 tracks/7/type = "value"
-tracks/7/path = NodePath("head/s1/s2/s3/s4/s5/s6:transform/rot")
+tracks/7/path = NodePath("s1:transform/rot")
 tracks/7/interp = 1
-tracks/7/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 6.57231, -7.01711 ] }
-tracks/8/type = "value"
-tracks/8/path = NodePath("head/s1/s2/s3/s4/s5:transform/rot")
-tracks/8/interp = 1
-tracks/8/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 8.41151, -6.67997 ] }
-tracks/9/type = "value"
-tracks/9/path = NodePath("head/s1/s2/s3/s4:transform/rot")
-tracks/9/interp = 1
-tracks/9/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 4.24859, -6.6135 ] }
-tracks/10/type = "value"
-tracks/10/path = NodePath("head/s1/s2/s3:transform/rot")
-tracks/10/interp = 1
-tracks/10/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ 1.22188, -0.920937 ] }
-tracks/11/type = "value"
-tracks/11/path = NodePath("head/s1/s2:transform/rot")
-tracks/11/interp = 1
-tracks/11/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ -0.501401, 1.06661 ] }
-tracks/12/type = "value"
-tracks/12/path = NodePath("head/s1:transform/rot")
-tracks/12/interp = 1
-tracks/12/keys = { "cont":true, "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "values":[ -0.971142, 0.776279 ] }
+tracks/7/imported = false
+tracks/7/keys = { "times":FloatArray( 1, 2 ), "transitions":FloatArray( 1, 1 ), "update":0, "values":[ -0.971142, 0.776279 ] }
 
 [node name="bluefish" type="KinematicBody2D"]
 
+transform/rot = 180.0
 transform/scale = Vector2( 0.7, 0.7 )
 input/pickable = false
 collision/layers = 1
@@ -143,95 +118,91 @@ script/script = ExtResource( 1 )
 __meta__ = { "__editor_plugin_screen__":"2D" }
 color = "blue"
 
-[node name="head" type="Sprite" parent="."]
+[node name="s1" type="Sprite" parent="."]
 
-transform/rot = 180.0
+transform/pos = Vector2( -0.225395, -7.6491e-06 )
 texture = ExtResource( 2 )
-region_rect = Rect2( 8, 0, 134, 156 )
-
-[node name="s1" type="Sprite" parent="head"]
-
-transform/pos = Vector2( 1.20699e-06, 32 )
-texture = ExtResource( 3 )
 region_rect = Rect2( 0, 47, 75, 29 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s2" type="Sprite" parent="s1"]
+
+transform/pos = Vector2( 0.571311, 42.6023 )
+texture = ExtResource( 3 )
+offset = Vector2( 0.610571, 36.0163 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s3" type="Sprite" parent="s1/s2"]
+
+transform/pos = Vector2( 1.02872, 57.9342 )
+texture = ExtResource( 4 )
+offset = Vector2( 0.340201, -9.6283 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s4" type="Sprite" parent="s1/s2/s3"]
+
+transform/pos = Vector2( 0.90801, 13.1496 )
+texture = ExtResource( 5 )
+offset = Vector2( -0.567808, -3.09606 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s5" type="Sprite" parent="s1/s2/s3/s4"]
+
+transform/pos = Vector2( -0.219873, 10.4991 )
+texture = ExtResource( 6 )
+offset = Vector2( -0.347932, 6.05641 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s6" type="Sprite" parent="s1/s2/s3/s4/s5"]
+
+transform/pos = Vector2( -0.612736, 14.5069 )
+texture = ExtResource( 7 )
+offset = Vector2( 0.264812, 4.48862 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s7" type="Sprite" parent="s1/s2/s3/s4/s5/s6"]
+
+transform/pos = Vector2( -2.32123, 29.0883 )
+transform/scale = Vector2( 1, 1.0833 )
+texture = ExtResource( 8 )
+offset = Vector2( 2.52982, -9.6604 )
+__meta__ = { "_edit_bone_":true }
+
+[node name="s8" type="Sprite" parent="s1/s2/s3/s4/s5/s6/s7"]
+
+transform/pos = Vector2( -5.57697, 46.8846 )
+transform/scale = Vector2( 0.999991, 1.00001 )
+texture = ExtResource( 9 )
+offset = Vector2( 3.8, 0 )
 __meta__ = { "_edit_bone_":true, "_edit_ik_":true }
 
-[node name="s2" type="Sprite" parent="head/s1"]
+[node name="s9" type="Sprite" parent="s1/s2/s3/s4/s5/s6/s7/s8"]
 
-transform/pos = Vector2( 0, 9.55943 )
-texture = ExtResource( 4 )
+transform/pos = Vector2( 2.48015, 44.6212 )
+transform/rot = 8.14222e-13
+offset = Vector2( 3.8, 0 )
 __meta__ = { "_edit_bone_":true }
 
-[node name="s3" type="Sprite" parent="head/s1/s2"]
+[node name="right_fin" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, 7.57627 )
-texture = ExtResource( 5 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s4" type="Sprite" parent="head/s1/s2/s3"]
-
-transform/pos = Vector2( 0, 9.07384 )
-texture = ExtResource( 6 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s5" type="Sprite" parent="head/s1/s2/s3/s4"]
-
-transform/pos = Vector2( 0.157752, 8.59885 )
-texture = ExtResource( 7 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s6" type="Sprite" parent="head/s1/s2/s3/s4/s5"]
-
-transform/pos = Vector2( 0, 8.79533 )
-texture = ExtResource( 8 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s7" type="Sprite" parent="head/s1/s2/s3/s4/s5/s6"]
-
-transform/pos = Vector2( 0, 8.09031 )
-texture = ExtResource( 9 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s8" type="Sprite" parent="head/s1/s2/s3/s4/s5/s6/s7"]
-
-transform/pos = Vector2( 0, 9.07388 )
+transform/pos = Vector2( -80, -30 )
+transform/rot = -179.878
 texture = ExtResource( 10 )
-__meta__ = { "_edit_bone_":true }
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
 
-[node name="s9" type="Sprite" parent="head/s1/s2/s3/s4/s5/s6/s7/s8"]
+[node name="left_fin" type="Sprite" parent="."]
 
-transform/pos = Vector2( 0, 8.31679 )
+transform/pos = Vector2( 80, -30 )
+transform/rot = -180.0
 texture = ExtResource( 11 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s10" type="Sprite" parent="head/s1/s2/s3/s4/s5/s6/s7/s8/s9"]
-
-transform/pos = Vector2( 0, 7.5028 )
-texture = ExtResource( 12 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="s11" type="Sprite" parent="head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10"]
-
-transform/pos = Vector2( 0, 8.69677 )
-texture = ExtResource( 13 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="end" type="Position2D" parent="head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11"]
-
-transform/scale = Vector2( 1, 1.03209 )
-__meta__ = { "_edit_bone_":true }
-
-[node name="end2" type="Position2D" parent="head/s1/s2/s3/s4/s5/s6/s7/s8/s9/s10/s11/end"]
-
-transform/pos = Vector2( 0, 25.5441 )
-__meta__ = { "_edit_bone_":true }
+__meta__ = { "_edit_bone_":true, "_edit_ik_":true }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 
 playback/process_mode = 1
 playback/default_blend_time = 0.0
 root/root = NodePath("..")
-anims/idle = SubResource( 3 )
+anims/idle = SubResource( 1 )
 anims/swim = SubResource( 2 )
 playback/active = true
 playback/speed = 1.0

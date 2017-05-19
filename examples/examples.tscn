@@ -1,0 +1,153 @@
+[gd_scene load_steps=2 format=1]
+
+[sub_resource type="GDScript" id=1]
+
+script/source = "extends Container
+
+
+onready var dropdown = get_node('PanelContainer/HBoxContainer/VBoxContainer/OptionButton')
+var options
+
+func load_options():
+	options  = []
+	options.append('swipe-spawner/swipe_spawner')
+	options.append('swipe-spawner/point_limited_swipe_spawner')
+	options.append('swipe-spawner/duration_limited_swipe_spawner')
+	options.append('swipe-impulse/swipe_impulse')
+	options.append('swipe-impulse/swipe_smooth_impulse')
+	options.append('swipe-impulse/swipe_touch_smooth_impulse')
+	options.append('swipe-signals/swipe_signals')
+	options.append('swipe-trail/swipe_trail')
+	options.append('swipe-areas/swipe_areas')
+	options.append('swipe-direction/swipe_direction')
+	options.append('gesture-detection/gesture_detection')
+	options.append('gesture-detection/gesture_detection_with_patterns')
+
+func populate_dropdown():
+	for option in options:
+		dropdown.add_item(option.split('/')[1])
+
+func _ready():
+	load_options()
+	populate_dropdown()
+
+func launch():
+	var selected_example = 0
+	if dropdown.get_selected() > 0:
+		selected_example = dropdown.get_selected()
+		
+	print('Selected example ', selected_example)
+	load_example(options[selected_example])
+
+func load_example(example):
+	print('Loading example ', example)
+	get_tree().change_scene('res://examples/' + example + '_example.tscn')
+"
+
+[node name="Examples" type="Container"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 480.0
+margin/bottom = 320.0
+script/script = SubResource( 1 )
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+
+anchor/right = 1
+anchor/bottom = 1
+rect/scale = Vector2( 2, 2 )
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 0
+size_flags/vertical = 0
+margin/left = 209.0
+margin/top = 184.0
+margin/right = -9.0
+margin/bottom = 8.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 7.0
+margin/top = 7.0
+margin/right = 337.0
+margin/bottom = 249.0
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 0
+size_flags/vertical = 2
+margin/left = 107.0
+margin/top = 0.0
+margin/right = 223.0
+margin/bottom = 242.0
+custom_constants/separation = 30
+alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 64.0
+margin/right = 116.0
+margin/bottom = 78.0
+text = "Select an Example"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton" type="OptionButton" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 108.0
+margin/right = 116.0
+margin/bottom = 128.0
+toggle_mode = true
+click_on_press = true
+enabled_focus_mode = 2
+shortcut = null
+flat = false
+align = 0
+selected = -1
+items = [  ]
+
+[node name="Button" type="Button" parent="PanelContainer/HBoxContainer/VBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 158.0
+margin/right = 116.0
+margin/bottom = 178.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Launch"
+flat = false
+
+[connection signal="pressed" from="PanelContainer/HBoxContainer/VBoxContainer/Button" to="." method="launch"]
+
+
